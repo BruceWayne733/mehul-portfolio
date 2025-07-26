@@ -45,17 +45,16 @@ export default function ProjectsPage() {
                 {project.stack.map((tech, i) => (
                   <span
                     key={i}
-                    className="text-sm px-2 py-1 bg-blue-100 text-blue-800 rounded-full"
+                    className="text-sm px-2 py-1 bg-primary/10 text-primary rounded-full"
                   >
                     {tech}
                   </span>
-                ))}
+                ))} 
               </div>
 
               <a
                 href={project.github}
-                target="_blank"
-                className="text-blue-600 hover:underline font-medium"
+                className="text-primary hover:underline font-medium"
               >
                 View on GitHub →
               </a>
