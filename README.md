@@ -1,7 +1,7 @@
 \Mehul Sharma – Portfolio Website
 A personal portfolio built with Next.js and Tailwind CSS to showcase my projects, resume, and professional profile.
 
-🚀 Live Demo: View Website
+🚀 Live Demo: [View Website](https://mehul-portfolio-beta.vercel.app/)
 
 📌 Features
 Responsive Design – Works seamlessly on desktop, tablet, and mobile.
@@ -25,26 +25,21 @@ Deployment: Vercel
 Home Page	Projects Section
 
 📦 Installation & Setup
-Clone the repo
+1. Clone the repo
+```bash
 
-bash
-Copy
-Edit
 git clone https://github.com/your-username/your-repo-name.git
 cd your-repo-name
-Install dependencies
-
-bash
-Copy
-Edit
+```
+2. Install dependencies
+```bash
 npm install
-Run the dev server
-
-bash
-Copy
-Edit
+```
+3. Run the dev server
+```bash
 npm run dev
-Open http://localhost:3000 in your browser.
+```
+4. Open http://localhost:3000 in your browser.
 
 📄 License
 This project is licensed under the MIT License.
