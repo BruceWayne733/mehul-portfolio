@@ -8,7 +8,7 @@ const projects = [
     description:
       'AI-powered tool that parses and ranks resumes based on job descriptions using NLP and TensorFlow.',
     stack: ['Python', 'FastAPI', 'PostgreSQL', 'TensorFlow'],
-    github: 'https://github.com/mehul/resume-sorter',
+    github: 'https://github.com/mehul/ai-resume-sorter',
   },
   {
     title: 'Curtin Health Backend',
