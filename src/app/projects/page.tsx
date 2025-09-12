@@ -4,11 +4,11 @@ import React from 'react';
 
 const projects = [
   {
-    title: 'Automated Resume Screening System',
+    title: 'AI Resume Sorter',
     description:
       'AI-powered tool that parses and ranks resumes based on job descriptions using NLP and TensorFlow.',
     stack: ['Python', 'FastAPI', 'PostgreSQL', 'TensorFlow'],
-    github: 'https://github.com/mehul/ai-resume-sorter',
+    github: 'https://github.com/BruceWayne733/ai-resume-sorter',
   },
   {
     title: 'Curtin Health Backend',
