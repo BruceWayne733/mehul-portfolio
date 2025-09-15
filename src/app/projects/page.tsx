@@ -4,25 +4,27 @@ import React from 'react';
 
 const projects = [
   {
-    title: 'AI Resume Sorter',
-    description:
-      'AI-powered tool that parses and ranks resumes based on job descriptions using NLP and TensorFlow.',
-    stack: ['Python', 'FastAPI', 'PostgreSQL', 'TensorFlow'],
-    github: 'https://github.com/BruceWayne733/ai-resume-sorter',
+  title: 'AI Resume Sorter (Backend)',
+  description:
+    'AI-powered tool that parses and ranks resumes based on job descriptions using NLP techniques.',
+  stack: ['Python', 'FastAPI', 'PostgreSQL'],
+  github: 'https://github.com/BruceWayne733/ai-resume-sorter',
   },
   {
-    title: 'Curtin Health Backend',
+    title: 'Path Visualizer',
     description:
-      'Backend system enabling nurses, doctors, and patients to manage and view health screenings.',
-    stack: ['Node.js', 'PostgreSQL', 'JWT'],
-    github: 'https://github.com/mehul/curtin-health-backend',
+      'Interactive visualization of pathfinding algorithms like Dijkstra, BFS, DFS, and A*. Built with React, TypeScript, and Tailwind CSS.',
+    stack: ['React', 'TypeScript', 'TailwindCSS'],
+    github: 'https://github.com/BruceWayne733/path-visualizer',
+    website: 'https://path-visualizer-beryl.vercel.app/', // once deployed
   },
   {
-    title: 'HiFive Game Refactor',
+    title: 'Portfolio Website',
     description:
-      'Refactored card game logic using GRASP & GoF patterns. Added AI players and UML-based planning.',
-    stack: ['Java', 'UML', 'IntelliJ'],
-    github: 'https://github.com/mehul/hifive-refactor',
+      'Personal portfolio showcasing projects, resume, and blog. Built with Next.js and Tailwind, deployed on Vercel.',
+    stack: ['Next.js', 'TypeScript', 'TailwindCSS', 'Vercel'],
+    github: 'https://github.com/BruceWayne733/mehul-portfolio',
+    website: 'https://mehul-portfolio-red.vercel.app/',
   },
 ];
 
@@ -49,15 +51,29 @@ export default function ProjectsPage() {
                   >
                     {tech}
                   </span>
-                ))} 
+                ))}
               </div>
 
-              <a
-                href={project.github}
-                className="text-primary hover:underline font-medium"
-              >
-                View on GitHub →
-              </a>
+              <div className="flex gap-4">
+                {project.github && (
+                  <a
+                    href={project.github}
+                    target="_blank"
+                    className="text-primary hover:underline font-medium"
+                  >
+                    GitHub →
+                  </a>
+                )}
+                {project.website && (
+                  <a
+                    href={project.website}
+                    target="_blank"
+                    className="text-primary hover:underline font-medium"
+                  >
+                    Live Demo →
+                  </a>
+                )}
+              </div>
             </div>
           ))}
         </div>
