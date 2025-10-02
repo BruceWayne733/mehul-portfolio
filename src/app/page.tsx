@@ -7,7 +7,8 @@ export default function Home() {
       <div className="bg-white/40 backdrop-blur-md border border-white/20 shadow-lg rounded-xl p-10 max-w-3xl w-full text-center">
         <h1 className="text-5xl font-extrabold mb-4">Mehul Sharma</h1>
         <p className="text-xl text-gray-700 mb-6">
-          Software Engineer focused on building scalable backend systems and clean user experiences.
+          Full-stack software engineer specializing in REST APIs, microservices, and AI-powered applications. Currently building
+          scalable backend systems with Python and JavaScript.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center mt-6">
