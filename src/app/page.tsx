@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function Home() {
   return (
     <main className="min-h-screen flex items-center justify-center px-4 bg-gradient-to-br from-slate-100 via-white to-slate-200 text-gray-900">
@@ -29,10 +31,12 @@ export default function Home() {
           rel="noopener noreferrer"
           className="flex items-center gap-2 px-6 py-3 border border-indigo-600 text-indigo-600 rounded-md hover:bg-indigo-100 transition duration-300"
           >
-          <img
-          src="/mehul_linkedin.jpg"
-          alt="Mehul Sharma"
-          className="w-6 h-6 rounded-full object-cover"
+          <Image
+            src="/mehul_linkedin.jpg"
+            alt="Mehul Sharma"
+            width={24}
+            height={24}
+            className="w-6 h-6 rounded-full object-cover"
           />
           <span className="text-sm font-medium">Linkedin</span>
           </a>
