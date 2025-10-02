@@ -1,5 +1,11 @@
 import Image from "next/image";
 
+const highlightStats = [
+  { value: "1+", label: "Years Experience" },
+  { value: "3", label: "Featured Projects" },
+  { value: "8+", label: "Technologies & Tools" },
+];
+
 export default function Home() {
   return (
     <main className="relative min-h-screen overflow-hidden py-24 flex items-center justify-center px-4 bg-gradient-to-br from-slate-100 via-white to-slate-200 text-gray-900">
@@ -42,6 +48,20 @@ export default function Home() {
           >
             Download Resume
           </a>
+        </div>
+
+        <div className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-3">
+          {highlightStats.map((stat) => (
+            <div
+              key={stat.label}
+              className="rounded-xl border border-white/30 bg-white/60 px-6 py-5 shadow-sm backdrop-blur"
+            >
+              <p className="text-3xl font-semibold text-indigo-600">{stat.value}</p>
+              <p className="mt-1 text-sm font-medium uppercase tracking-wide text-gray-600">
+                {stat.label}
+              </p>
+            </div>
+          ))}
         </div>
       </div>
     </main>
