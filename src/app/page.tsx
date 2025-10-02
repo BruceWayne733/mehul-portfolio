@@ -47,7 +47,7 @@ export default function Home() {
             </a>
 
             <a
-              href="/Mehul_Sharma_Resume.pdf"
+              href="/Mehul%20Sharma%20-%20Resume.pdf"
               download
               className="px-8 py-4 border-2 border-gray-600 dark:border-gray-400 text-gray-600 dark:text-gray-400 rounded-xl hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-all duration-300 transform hover:scale-105 font-semibold"
             >
