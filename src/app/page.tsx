@@ -2,14 +2,7 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <main className="min-h-screen flex items-center justify-center px-4 bg-gradient-to-br from-slate-100 via-white to-slate-200 text-gray-900">
-      {/* Blobs Background */}
-      <div className="absolute top-0 left-0 w-full h-full -z-10">
-        <div className="absolute w-96 h-96 bg-indigo-300 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob top-10 left-10"></div>
-        <div className="absolute w-96 h-96 bg-purple-300 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob top-40 right-10 animation-delay-2000"></div>
-        <div className="absolute w-96 h-96 bg-pink-300 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob bottom-10 left-1/2 transform -translate-x-1/2"></div>
-      </div>
-
+    <main className="relative min-h-screen overflow-hidden py-24 flex items-center justify-center px-4 bg-gradient-to-br from-slate-100 via-white to-slate-200 text-gray-900">
       {/* Content */}
       <div className="bg-white/40 backdrop-blur-md border border-white/20 shadow-lg rounded-xl p-10 max-w-3xl w-full text-center">
         <h1 className="text-5xl font-extrabold mb-4">Mehul Sharma</h1>
