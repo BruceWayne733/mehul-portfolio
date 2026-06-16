@@ -1,147 +1,250 @@
+import Image from 'next/image';
+import Link from 'next/link';
+
+const focusAreas = [
+  'Backend architecture that stays maintainable under real usage.',
+  'Product-minded frontend work with strong hierarchy and motion.',
+  'AI-assisted workflows that solve an actual operational problem.',
+];
+
+const highlightProjects = [
+  {
+    name: 'AI Resume Sorter',
+    summary:
+      'An NLP-driven backend system that parses resumes against job descriptions and ranks candidates with an explainable workflow.',
+    tags: ['Python', 'FastAPI', 'PostgreSQL', 'NLP'],
+  },
+  {
+    name: 'Path Visualizer',
+    summary:
+      'An interactive algorithms playground designed to make Dijkstra, BFS, DFS, and A* feel intuitive instead of abstract.',
+    tags: ['React', 'TypeScript', 'Algorithms'],
+  },
+  {
+    name: 'Portfolio Platform',
+    summary:
+      'A deliberately designed personal site focused on clarity, visual polish, and a stronger first impression.',
+    tags: ['Next.js', 'Tailwind CSS', 'Responsive UI'],
+  },
+];
+
+const principles = [
+  {
+    title: 'Build for scale, not just demos',
+    copy:
+      'I care about codebases that remain understandable after the initial excitement wears off. Structure, interfaces, and operational simplicity matter.',
+  },
+  {
+    title: 'Design should carry intent',
+    copy:
+      'I treat frontend work as product communication. Every section should answer a user question quickly and leave a crisp impression.',
+  },
+  {
+    title: 'Execution beats novelty',
+    copy:
+      'The goal is not to use every new tool. The goal is to choose the right stack and ship something that actually works well.',
+  },
+];
+
 export default function Home() {
   return (
-    <main className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-slate-100 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 text-gray-900 dark:text-white transition-colors duration-300">
-      {/* Blobs Background */}
-      <div className="absolute top-0 left-0 w-full h-full -z-10">
-        <div className="absolute w-96 h-96 bg-indigo-300/30 dark:bg-indigo-600/20 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob top-10 left-10"></div>
-        <div className="absolute w-96 h-96 bg-purple-300/30 dark:bg-purple-600/20 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob top-40 right-10 animation-delay-2000"></div>
-        <div className="absolute w-96 h-96 bg-pink-300/30 dark:bg-pink-600/20 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob bottom-10 left-1/2 transform -translate-x-1/2"></div>
-      </div>
+    <main className="pb-20">
+      <section className="section-shell pt-8 sm:pt-12">
+        <div className="panel grid overflow-hidden rounded-[2rem] lg:grid-cols-[1.35fr_0.9fr]">
+          <div className="relative px-6 py-12 sm:px-10 sm:py-16">
+            <div className="rise">
+              <span className="eyebrow">Software Engineer / Full-Stack Builder</span>
+            </div>
+            <div className="rise-delay mt-6 max-w-3xl">
+              <h1 className="text-5xl font-semibold leading-none tracking-[-0.06em] sm:text-7xl">
+                I build systems that feel sharp on the surface and solid underneath.
+              </h1>
+              <p className="mt-6 max-w-2xl text-lg leading-8 text-[var(--muted)] sm:text-xl">
+                I&apos;m Mehul Sharma. My work sits at the intersection of backend engineering,
+                modern product interfaces, and practical AI-driven tooling.
+              </p>
+            </div>
 
-      {/* Hero Section */}
-      <div className="min-h-screen flex items-center justify-center px-4">
-        <div className="bg-white/40 dark:bg-gray-800/40 backdrop-blur-md border border-white/20 dark:border-gray-700/20 shadow-2xl rounded-2xl p-10 max-w-4xl w-full text-center">
-          <div className="mb-8">
-            <h1 className="text-6xl md:text-7xl font-extrabold mb-4 bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
-              Mehul Sharma
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-700 dark:text-gray-300 mb-6 font-light">
-              Software Engineer & Full-Stack Developer
-            </p>
-            <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto leading-relaxed">
-              Passionate about building scalable backend systems and crafting exceptional user experiences.
-              Specialized in modern web technologies and distributed systems.
-            </p>
-          </div>
+            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+              <Link
+                href="/projects"
+                className="inline-flex items-center justify-center rounded-full bg-[var(--foreground)] px-6 py-3 text-sm font-semibold text-[var(--background)] hover:-translate-y-0.5"
+              >
+                Explore Projects
+              </Link>
+              <a
+                href="/Mehul%20Sharma%20-%20Resume.pdf"
+                className="inline-flex items-center justify-center rounded-full border border-[var(--border)] bg-[var(--surface-strong)] px-6 py-3 text-sm font-semibold text-[var(--foreground)] hover:-translate-y-0.5"
+              >
+                Open Resume
+              </a>
+              <a
+                href="https://www.linkedin.com/in/mehul-sharma-1308861a0/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center rounded-full border border-transparent px-6 py-3 text-sm font-semibold text-[var(--muted)] hover:text-[var(--foreground)]"
+              >
+                LinkedIn
+              </a>
+            </div>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-            <a
-              href="/projects"
-              className="px-8 py-4 bg-gradient-to-r from-indigo-600 to-purple-600 text-white rounded-xl hover:from-purple-600 hover:to-indigo-600 transition-all duration-300 transform hover:scale-105 font-semibold shadow-lg hover:shadow-xl"
-            >
-              View Projects
-            </a>
-
-            <a
-              href="https://www.linkedin.com/in/mehul-sharma-1308861a0/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-3 px-8 py-4 border-2 border-indigo-600 dark:border-indigo-400 text-indigo-600 dark:text-indigo-400 rounded-xl hover:bg-indigo-50 dark:hover:bg-indigo-900/20 transition-all duration-300 transform hover:scale-105 font-semibold"
-            >
-              <img
-                src="/mehul_linkedin.jpg"
-                alt="Mehul Sharma"
-                className="w-6 h-6 rounded-full object-cover"
-              />
-              <span>LinkedIn</span>
-            </a>
-
-            <a
-              href="/Mehul%20Sharma%20-%20Resume.pdf"
-              download
-              className="px-8 py-4 border-2 border-gray-600 dark:border-gray-400 text-gray-600 dark:text-gray-400 rounded-xl hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-all duration-300 transform hover:scale-105 font-semibold"
-            >
-              Download Resume
-            </a>
-          </div>
-        </div>
-      </div>
-
-      {/* About Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-12 bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
-            About Me
-          </h2>
-          <div className="bg-white/40 dark:bg-gray-800/40 backdrop-blur-md border border-white/20 dark:border-gray-700/20 shadow-xl rounded-2xl p-8 md:p-12">
-            <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
-              I'm a dedicated software engineer with a passion for creating innovative solutions that make a difference.
-              My journey in technology has been driven by curiosity and a desire to solve complex problems through elegant code.
-            </p>
-            <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
-              When I'm not coding, you can find me exploring new technologies, contributing to open-source projects,
-              or sharing knowledge with the developer community. I believe in continuous learning and staying up-to-date
-              with the latest industry trends and best practices.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Skills Section */}
-      <section className="py-20 px-4 bg-gray-50/50 dark:bg-gray-900/50">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-12 bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
-            Technical Skills
-          </h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-white/60 dark:bg-gray-800/60 backdrop-blur-md border border-white/20 dark:border-gray-700/20 shadow-xl rounded-2xl p-8 text-center">
-              <h3 className="text-2xl font-bold mb-6 text-indigo-600 dark:text-indigo-400">Backend</h3>
-              <div className="flex flex-wrap gap-3 justify-center">
-                {['Python', 'FastAPI', 'Django', 'PostgreSQL', 'Redis', 'Docker'].map((skill) => (
-                  <span key={skill} className="px-4 py-2 bg-indigo-100 dark:bg-indigo-900/50 text-indigo-700 dark:text-indigo-300 rounded-full text-sm font-medium">
-                    {skill}
-                  </span>
-                ))}
+            <div className="mt-10 grid gap-4 sm:grid-cols-3">
+              <div className="rounded-3xl border border-[var(--border)] bg-[var(--surface-strong)] p-4">
+                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--muted)]">
+                  Focus
+                </p>
+                <p className="mt-2 text-2xl font-semibold">Backend</p>
+              </div>
+              <div className="rounded-3xl border border-[var(--border)] bg-[var(--surface-strong)] p-4">
+                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--muted)]">
+                  Strength
+                </p>
+                <p className="mt-2 text-2xl font-semibold">System Design</p>
+              </div>
+              <div className="rounded-3xl border border-[var(--border)] bg-[var(--surface-strong)] p-4">
+                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--muted)]">
+                  Approach
+                </p>
+                <p className="mt-2 text-2xl font-semibold">Ship Cleanly</p>
               </div>
             </div>
-            <div className="bg-white/60 dark:bg-gray-800/60 backdrop-blur-md border border-white/20 dark:border-gray-700/20 shadow-xl rounded-2xl p-8 text-center">
-              <h3 className="text-2xl font-bold mb-6 text-purple-600 dark:text-purple-400">Frontend</h3>
-              <div className="flex flex-wrap gap-3 justify-center">
-                {['React', 'Next.js', 'TypeScript', 'Tailwind CSS', 'JavaScript'].map((skill) => (
-                  <span key={skill} className="px-4 py-2 bg-purple-100 dark:bg-purple-900/50 text-purple-700 dark:text-purple-300 rounded-full text-sm font-medium">
-                    {skill}
-                  </span>
-                ))}
-              </div>
-            </div>
-            <div className="bg-white/60 dark:bg-gray-800/60 backdrop-blur-md border border-white/20 dark:border-gray-700/20 shadow-xl rounded-2xl p-8 text-center">
-              <h3 className="text-2xl font-bold mb-6 text-pink-600 dark:text-pink-400">Tools & Others</h3>
-              <div className="flex flex-wrap gap-3 justify-center">
-                {['Git', 'AWS', 'Linux', 'Nginx', 'Machine Learning'].map((skill) => (
-                  <span key={skill} className="px-4 py-2 bg-pink-100 dark:bg-pink-900/50 text-pink-700 dark:text-pink-300 rounded-full text-sm font-medium">
-                    {skill}
-                  </span>
-                ))}
+          </div>
+
+          <div className="border-t border-[var(--border)] bg-[linear-gradient(180deg,rgba(194,65,12,0.14),transparent)] px-6 py-8 lg:border-l lg:border-t-0 lg:px-8 lg:py-10">
+            <div className="mx-auto max-w-sm">
+              <div className="panel rounded-[1.75rem] p-5">
+                <div className="flex items-center gap-4">
+                  <div className="relative h-20 w-20 overflow-hidden rounded-[1.5rem] border border-[var(--border)]">
+                    <Image
+                      src="/mehul_linkedin.jpg"
+                      alt="Portrait of Mehul Sharma"
+                      fill
+                      className="object-cover"
+                      sizes="80px"
+                    />
+                  </div>
+                  <div>
+                    <p className="text-xl font-semibold">Mehul Sharma</p>
+                    <p className="mt-1 text-sm text-[var(--muted)]">
+                      Building thoughtful products with strong engineering fundamentals.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="accent-line my-6" />
+
+                <div className="space-y-4">
+                  {focusAreas.map((item) => (
+                    <div key={item} className="flex gap-3">
+                      <span className="mt-1 h-2.5 w-2.5 rounded-full bg-[var(--accent)]" />
+                      <p className="text-sm leading-6 text-[var(--muted)]">{item}</p>
+                    </div>
+                  ))}
+                </div>
+
+                <div className="mt-6 rounded-[1.5rem] border border-[var(--border)] bg-[var(--surface-strong)] p-4">
+                  <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--muted)]">
+                    Current Lens
+                  </p>
+                  <p className="mt-2 text-sm leading-6 text-[var(--foreground)]">
+                    Creating backend-first products that still feel premium to use on the frontend.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Contact Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl md:text-5xl font-bold mb-8 bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
-            Let's Connect
-          </h2>
-          <p className="text-lg text-gray-600 dark:text-gray-400 mb-8">
-            I'm always open to discussing new opportunities and interesting projects.
+      <section className="section-shell mt-20 sm:mt-24">
+        <div className="flex flex-col gap-5 sm:flex-row sm:items-end sm:justify-between">
+          <div>
+            <span className="eyebrow">Selected Work</span>
+            <h2 className="section-title mt-4">Projects that represent how I think.</h2>
+          </div>
+          <p className="section-copy">
+            I like products that are clear in purpose, technically grounded, and enjoyable to explore.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="mailto:your.email@example.com"
-              className="px-8 py-4 bg-gradient-to-r from-gray-600 to-gray-700 text-white rounded-xl hover:from-gray-700 hover:to-gray-800 transition-all duration-300 transform hover:scale-105 font-semibold shadow-lg hover:shadow-xl"
+        </div>
+
+        <div className="mt-10 grid gap-5 lg:grid-cols-3">
+          {highlightProjects.map((project) => (
+            <article
+              key={project.name}
+              className="panel rounded-[1.75rem] p-6 hover:-translate-y-1"
             >
-              Send Email
-            </a>
-            <a
-              href="https://github.com/BruceWayne733"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-8 py-4 border-2 border-gray-600 dark:border-gray-400 text-gray-600 dark:text-gray-400 rounded-xl hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-all duration-300 transform hover:scale-105 font-semibold"
-            >
-              View GitHub
-            </a>
+              <div className="flex items-center justify-between gap-4">
+                <p className="text-lg font-semibold">{project.name}</p>
+                <span className="rounded-full bg-[var(--accent-soft)] px-3 py-1 text-xs font-semibold uppercase tracking-[0.16em] text-[var(--accent-strong)]">
+                  Highlight
+                </span>
+              </div>
+              <p className="mt-4 text-sm leading-7 text-[var(--muted)]">{project.summary}</p>
+              <div className="mt-6 flex flex-wrap gap-2">
+                {project.tags.map((tag) => (
+                  <span
+                    key={tag}
+                    className="rounded-full border border-[var(--border)] px-3 py-1 text-xs font-medium text-[var(--muted)]"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="section-shell mt-20 sm:mt-24">
+        <div className="grid gap-5 lg:grid-cols-[0.9fr_1.1fr]">
+          <div className="panel rounded-[2rem] p-6 sm:p-8">
+            <span className="eyebrow">Working Style</span>
+            <h2 className="section-title mt-4">The standard I try to hold.</h2>
+            <p className="section-copy mt-4">
+              Good engineering is not only about correctness. It is also about how quickly another person can understand, trust, and extend what you built.
+            </p>
+          </div>
+
+          <div className="grid gap-5 md:grid-cols-3">
+            {principles.map((principle) => (
+              <article key={principle.title} className="panel rounded-[2rem] p-6">
+                <p className="text-lg font-semibold leading-7">{principle.title}</p>
+                <p className="mt-4 text-sm leading-7 text-[var(--muted)]">{principle.copy}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section-shell mt-20 sm:mt-24">
+        <div className="panel rounded-[2.2rem] px-6 py-10 sm:px-10 sm:py-12">
+          <div className="grid gap-8 lg:grid-cols-[1.1fr_0.9fr] lg:items-end">
+            <div>
+              <span className="eyebrow">Contact</span>
+              <h2 className="section-title mt-4">If the work matters, I want to hear about it.</h2>
+              <p className="section-copy mt-4">
+                I&apos;m interested in roles and projects where product quality and engineering discipline both matter.
+              </p>
+            </div>
+
+            <div className="flex flex-col gap-3 sm:flex-row lg:justify-end">
+              <a
+                href="https://github.com/BruceWayne733"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center rounded-full bg-[var(--foreground)] px-6 py-3 text-sm font-semibold text-[var(--background)] hover:-translate-y-0.5"
+              >
+                GitHub
+              </a>
+              <a
+                href="https://www.linkedin.com/in/mehul-sharma-1308861a0/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center rounded-full border border-[var(--border)] bg-[var(--surface-strong)] px-6 py-3 text-sm font-semibold text-[var(--foreground)] hover:-translate-y-0.5"
+              >
+                LinkedIn
+              </a>
+            </div>
           </div>
         </div>
       </section>
