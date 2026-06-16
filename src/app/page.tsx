@@ -156,7 +156,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section-shell mt-20 sm:mt-24">
+      <section className="section-shell deferred-section mt-20 sm:mt-24">
         <div className="flex flex-col gap-5 sm:flex-row sm:items-end sm:justify-between">
           <div>
             <span className="eyebrow">Selected Work</span>
@@ -195,7 +195,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section-shell mt-20 sm:mt-24">
+      <section className="section-shell deferred-section mt-20 sm:mt-24">
         <div className="grid gap-5 lg:grid-cols-[0.9fr_1.1fr]">
           <div className="panel rounded-[2rem] p-6 sm:p-8">
             <span className="eyebrow">Working Style</span>
@@ -216,7 +216,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section-shell mt-20 sm:mt-24">
+      <section className="section-shell deferred-section mt-20 sm:mt-24">
         <div className="panel rounded-[2.2rem] px-6 py-10 sm:px-10 sm:py-12">
           <div className="grid gap-8 lg:grid-cols-[1.1fr_0.9fr] lg:items-end">
             <div>

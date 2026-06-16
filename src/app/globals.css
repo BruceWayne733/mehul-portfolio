@@ -44,22 +44,9 @@ body {
   background:
     radial-gradient(circle at top left, rgba(251, 146, 60, 0.18), transparent 32%),
     radial-gradient(circle at top right, rgba(14, 165, 233, 0.14), transparent 28%),
-    linear-gradient(180deg, var(--background), color-mix(in srgb, var(--background) 84%, black 16%));
+    linear-gradient(180deg, var(--background), color-mix(in srgb, var(--background) 88%, black 12%));
   color: var(--foreground);
   font-family: var(--font-sans);
-}
-
-body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  background-image:
-    linear-gradient(rgba(255, 255, 255, 0.14) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.14) 1px, transparent 1px);
-  background-size: 72px 72px;
-  mask-image: radial-gradient(circle at center, black 22%, transparent 78%);
-  opacity: 0.22;
 }
 
 a,
@@ -96,10 +83,9 @@ button {
 }
 
 .panel {
-  background: var(--surface-card);
+  background: color-mix(in srgb, var(--surface-card) 92%, var(--background) 8%);
   border: 1px solid var(--border);
   box-shadow: var(--shadow);
-  backdrop-filter: blur(16px);
 }
 
 .eyebrow {
@@ -120,6 +106,11 @@ button {
 .accent-line {
   height: 1px;
   background: linear-gradient(90deg, var(--accent), transparent);
+}
+
+.deferred-section {
+  content-visibility: auto;
+  contain-intrinsic-size: 1px 720px;
 }
 
 .rise {

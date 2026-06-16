@@ -17,7 +17,7 @@ export default function Navbar() {
 
   return (
     <header className="sticky top-0 z-50 px-4 py-4 sm:px-6">
-      <nav className="mx-auto flex max-w-6xl items-center justify-between rounded-full border border-[var(--border)] bg-[color:var(--surface)]/85 px-4 py-3 shadow-[0_20px_60px_rgba(15,23,42,0.14)] backdrop-blur md:px-6">
+      <nav className="mx-auto flex max-w-6xl items-center justify-between rounded-full border border-[var(--border)] bg-[color:var(--surface)] px-4 py-3 shadow-[0_20px_60px_rgba(15,23,42,0.14)] md:px-6">
         <Link
           href="/"
           className="text-sm font-semibold uppercase tracking-[0.32em] text-[var(--foreground)]"
@@ -88,7 +88,7 @@ export default function Navbar() {
       </nav>
 
       {isOpen && (
-        <div className="mx-auto mt-3 flex max-w-6xl flex-col gap-2 rounded-3xl border border-[var(--border)] bg-[color:var(--surface)]/95 p-3 shadow-[0_18px_40px_rgba(15,23,42,0.12)] backdrop-blur md:hidden">
+        <div className="mx-auto mt-3 flex max-w-6xl flex-col gap-2 rounded-3xl border border-[var(--border)] bg-[color:var(--surface)] p-3 shadow-[0_18px_40px_rgba(15,23,42,0.12)] md:hidden">
           {navLinks.map((link) => {
             const active = pathname === link.href;
 

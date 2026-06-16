@@ -48,7 +48,7 @@ export default function ProjectsPage() {
         </div>
       </section>
 
-      <section className="section-shell mt-10">
+      <section className="section-shell deferred-section mt-10">
         <div className="grid gap-5 xl:grid-cols-3">
           {projects.map((project) => (
             <article
@@ -105,7 +105,7 @@ export default function ProjectsPage() {
         </div>
       </section>
 
-      <section className="section-shell mt-14">
+      <section className="section-shell deferred-section mt-14">
         <div className="panel rounded-[2rem] px-6 py-8 sm:px-8 sm:py-10">
           <div className="flex flex-col gap-5 md:flex-row md:items-center md:justify-between">
             <div>
