@@ -23,7 +23,6 @@ Personal resume + portfolio site, styled as an "interactive career editorial" (m
 - Copy: short, specific, active voice. No buzzwords.
 
 ## Open items
-- Add LinkedIn and GitHub links to the contact section once Mehul provides them.
 - Confirm the BQP start month (currently "2026 – Present") and whether Drish Infotech is still current.
 - The résumé PDF still says "Co-Founder / Stealth AI Startup"; the site says "Founder & Solo Engineer". Update the PDF to match.
 - Add 3 flagship projects (to be decided).
